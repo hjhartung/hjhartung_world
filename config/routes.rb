@@ -8,6 +8,6 @@ KcwWorld::Application.routes.draw do
   match 'home' => 'home#index', :as => :home
   match 'articles' => 'articles#index', :as => :articles
 
-  root :to => 'articles#index'
+  root :to => 'home#index'
 
 end
