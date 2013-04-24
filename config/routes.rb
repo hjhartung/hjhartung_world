@@ -1,10 +1,13 @@
 KcwWorld::Application.routes.draw do
 
+  resources :articles
   resources :categories
   resources :proverbs
   resources :photos
     
   match 'home' => 'home#index', :as => :home
-  root :to => 'home#index'
+  match 'articles' => 'articles#index', :as => :articles
+
+  root :to => 'articles#index'
 
 end
